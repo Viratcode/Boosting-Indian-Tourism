@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tourist Place Prediction App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tourist Place Prediction</h1>
+        <form action="/predict" method="post">
+            <label for="input_string">Enter a keyword (e.g., 'beach', 'mountain'):</label>
+            <input type="text" id="input_string" name="input_string" required>
+            <input type="submit" value="Predict">
+        </form>
+        {% if prediction_text %}
+            <div class="output">
+                <h2>Recommended Tourist Places:</h2>
+                <ul>
+                    {% for place in prediction_text %}
+                        <li>{{ place }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
