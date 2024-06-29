@@ -1,0 +1,11 @@
+myenv/
+tourist_project.csv
+.idea
+.ipynb_checkpoints/
+universal_sentence_encoder.pkl
+universal_sentence_encoder/
+tourist_project.ipynb
+nearest_neighbors_model.pkl
+
+
+
